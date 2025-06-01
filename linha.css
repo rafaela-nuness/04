@@ -1,0 +1,291 @@
+:root {
+    --cor-fundo-claro: #f9f9f9;
+    --cor-fundo-escuro: #121212;
+    --cor-primaria: #d95b78;
+    --cor-secundaria: #a0213c;
+    --cor-texto-claro: #333;
+    --cor-texto-escuro: #eee;
+    --velocidade-transicao: 0.3s;
+  }
+  
+  body.escuro {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-escuro);
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+    transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
+  }
+  
+  header {
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
+}
+
+  
+nav a:hover {
+    background-color: #ffe1e6;
+    color: var(--cor-primaria);
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  section.introducao {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  section.introducao h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  section.introducao p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  
+  /* Linha do tempo */
+  .linha-do-tempo {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--cor-primaria);
+  }
+  
+  .linha-do-tempo::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    background: linear-gradient(180deg, var(--cor-primaria), var(--cor-secundaria));
+    border-radius: 10px;
+  }
+  
+  /* Cada item da timeline */
+  .item-timeline {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .item-timeline::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(217,91,120,0.7);
+    transition: background-color 0.3s;
+  }
+  
+  /* Quando o item fica visível */
+  .item-timeline.visivel {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  a,
+  a:visited,
+  a:active {
+    color: inherit;         /* Herdar a cor do texto ao redor */
+    text-decoration: none;  /* Remover sublinhado */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Sublinha só ao passar o mouse, opcional */
+  }
+  
