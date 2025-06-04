@@ -12,21 +12,20 @@
     --cor-secundaria: #a0213c;
     --cor-texto-claro: #333;
     --cor-texto-escuro: #eee;
+    --cor-hover: #ffe1e6;
+    --radius: 12px;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
     --velocidade-transicao: 0.3s;
-}
-
-/* Modo escuro */
-body.escuro {
-    background-color: var(--cor-fundo-escuro);
-    color: var(--cor-texto-escuro);
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
 }
 
 /* Estilos gerais */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: var(--cor-fundo-claro);
+    font-family: var(--fonte-principal);
+    background: linear-gradient(120deg, #f9f9f9, #ffeef2);
     color: var(--cor-texto-claro);
+    line-height: 1.6;
     transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
 }
 
@@ -34,27 +33,28 @@ body {
 header {
     background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
-    padding: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    margin: 0;
+    font-size: 2.8rem;
     font-weight: 700;
-    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-family: var(--fonte-destaque);
 }
 
 header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
+    margin-top: 0.5rem;
 }
 
-/* MENU DE NAVEGAÇÃO FIXO */
+/* MENU DE NAVEGAÇÃO */
 nav {
     margin-top: 1rem;
 }
@@ -63,8 +63,9 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -76,13 +77,13 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
     transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
 }
 
 nav a:hover {
-    background-color: #ffe1e6;
+    background-color: var(--cor-hover);
     color: var(--cor-primaria);
 }
 
@@ -91,69 +92,108 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem;
-    text-align: center;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(160, 33, 60, 0.3);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    text-align: left;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow var(--velocidade-transicao);
+}
+
+.hero:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: var(--cor-primaria);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    opacity: 0.2;
 }
 
 .foto-perfil {
-    max-width: 150px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-texto {
+    max-width: 600px;
+    z-index: 1;
 }
 
 .hero-texto h2 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: var(--fonte-destaque);
     color: var(--cor-primaria);
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .hero-texto p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--cor-texto-claro);
 }
 
+/* BOTÃO */
 .botao {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
+    margin-top: 1.2rem;
+    padding: 12px 24px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     color: white;
     background-color: var(--cor-primaria);
+    border-radius: var(--radius);
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color var(--velocidade-transicao);
+    transition: background-color var(--velocidade-transicao), transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(217, 91, 120, 0.4);
+    cursor: pointer;
+    animation: pulse 2s infinite;
 }
 
 .botao:hover {
     background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(160, 33, 60, 0.6);
 }
+
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     header {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
 
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
     .hero {
         flex-direction: column;
+        padding: 2rem 1.5rem;
         text-align: center;
-        padding: 1.5rem;
     }
 
     .foto-perfil {
-        max-width: 120px;
+        width: 120px;
+        height: 120px;
     }
 
     .hero-texto h2 {
@@ -162,5 +202,9 @@ nav a:hover {
 
     .hero-texto p {
         font-size: 1rem;
+    }
+
+    .botao {
+        padding: 10px 20px;
     }
 }

@@ -21,3 +21,86 @@ function revelarItens() {
 
 window.addEventListener('scroll', revelarItens);
 window.addEventListener('load', revelarItens);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("imgModal");
+const captionText = document.getElementById("caption");
+const imagens = document.querySelectorAll(".certificado");
+
+imagens.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+  });
+});
+
+document.querySelector(".fechar").onclick = () => {
+  modal.style.display = "none";
+};
