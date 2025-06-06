@@ -16,6 +16,29 @@
       <a href="linha.html">Linha do Tempo</a>
       <a href="certificados.html">Contato</a>
     </nav>
+
+
+
+
+
+
+
+
+<button id="toggle-dark">🌙</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </header>
 
 
@@ -94,8 +117,8 @@
     <h2>Projeto 6: Cores&Gestalt – 28/02</h2>
 
     <div class="screenshot">
-      <h3>📸 Screenshot/mockup do projeto</h3>
-      <img src="imagens/linus-torvalds.png" alt="Apresentação sobre Linus Torvalds">
+      
+      <img src="./img/gestalt.png" alt="Apresentação sobre Linus Torvalds">
     </div>
 
     <div class="descricao-tecnica">
@@ -118,9 +141,81 @@
 
     <div class="link">
       <h3> Link para o projeto</h3>
-      <p><a href="#" target="_blank">[Link para os slides ou arquivo, se disponível]</a></p>
+      <p><a href="https://www.canva.com/design/DAGgaKf9vcE/R3tMs5gOPnGnY9avVRkniw/edit?utm_content=DAGgaKf9vcE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Projeto</a></p>
     </div>
   </section>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script de Modo Escuro -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-dark");
+    const body = document.body;
+
+    // Checa o tema salvo no localStorage
+    if (localStorage.getItem("tema") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    // Atualiza ícone no carregamento
+    toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+
+    // Alterna o modo ao clicar
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const temaAtual = body.classList.contains("dark-mode") ? "dark" : "light";
+      toggleBtn.textContent = temaAtual === "dark" ? "☀️" : "🌙";
+      localStorage.setItem("tema", temaAtual);
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

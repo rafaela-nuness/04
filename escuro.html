@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Tema Claro/Escuro</title>
+  <style>
+    /* Tema claro (padrão) */
+    body {
+      background-color: #fff;
+      color: #222;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Botão simples */
+    #toggle-dark-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Tema escuro */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode a {
+      color: #82aaff;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌙</button>
+
+  <header>
+    <h1>Meu Portfólio</h1>
+  </header>
+
+  <main>
+    <p>Conteúdo da página aqui. Teste mudar o tema e vá para outra página com esse mesmo código para ver o tema persistir!</p>
+    <p><a href="outra-pagina.html">Ir para outra página</a></p>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-dark-mode");
+    const body = document.body;
+
+    // Aplica tema salvo
+    if (localStorage.getItem("tema") === "dark") {
+      body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    } else {
+      toggleBtn.textContent = "🌙";
+    }
+
+    // Alterna tema no clique
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const temaAtual = body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("tema", temaAtual);
+      toggleBtn.textContent = temaAtual === "dark" ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

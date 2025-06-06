@@ -5,35 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Início | Meu Portfólio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <header>
     <div class="container-header">
-      <h1>Seu Nome</h1>
+      <h1>Rafaela</h1>
       <p>Minha Jornada de Desenvolvimento - Semestre 2025</p>
       <nav class="menu">
         <ul>
           <li><a href="index.html">Introdução</a></li>
           <li><a href="linha.html">Linha do Tempo</a></li>
-          <li><a href="certificados.html
-            
-            ">Contato</a></li>
+          <li><a href="certificados.html">Contato</a></li>
         </ul>
       </nav>
     </div>
+    <button id="dark-mode-toggle">🌙</button>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" data-aos="fade-up">
       <img src="minha-foto.jpg" alt="Minha Foto" class="foto-perfil">
       <div class="hero-texto">
-        <h2>Olá! Eu sou [Seu Nome]</h2>
+        <h2>Olá! EU SOU A RAFAELA</h2>
         <p>Desenvolvedora em formação, apaixonada por tecnologia e criatividade!</p>
         <a href="sobre.html" class="botao">Saiba mais sobre mim</a>
       </div>
     </section>
   </main>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('escuro');
+      toggleButton.textContent = '☀️';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('escuro');
+      if (document.body.classList.contains('escuro')) {
+        toggleButton.textContent = '☀️';
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        toggleButton.textContent = '🌙';
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,6 +17,27 @@
       <a href="linha.html">Linha do Tempo</a>
       <a href="certificados.html">Contato</a>
     </nav>
+
+
+
+
+
+
+<button id="toggle-dark">🌙</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </header>
 
 
@@ -87,8 +108,8 @@
     <h2>Projeto 4: Metodologias Ágeis – 21/02</h2>
 
     <div class="screenshot">
-      <h3>📸 Screenshot/mockup do projeto</h3>
-      <img src="imagens/linus-torvalds.png" alt="Metodologias Ágeis">
+      
+      <img src="./img/metodologias.png" alt="Metodologias Ágeis">
     </div>
 
     <div class="descricao-tecnica">
@@ -112,3 +133,66 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script de Modo Escuro -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-dark");
+    const body = document.body;
+
+    // Checa o tema salvo no localStorage
+    if (localStorage.getItem("tema") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    // Atualiza ícone no carregamento
+    toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+
+    // Alterna o modo ao clicar
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const temaAtual = body.classList.contains("dark-mode") ? "dark" : "light";
+      toggleBtn.textContent = temaAtual === "dark" ? "☀️" : "🌙";
+      localStorage.setItem("tema", temaAtual);
+    });
+  </script>

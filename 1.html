@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <header>
     <h1>Seu Nome</h1>
     <p>Minha Jornada de Desenvolvimento - Semestre 2025</p>
@@ -17,117 +16,60 @@
       <a href="linha.html">Linha do Tempo</a>
       <a href="certificados.html">Contato</a>
     </nav>
+    
+
+    <button id="toggle-dark">🌙</button>
   </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <section class="projeto">
     <h2>Projeto 1: Linus Torvalds – 05/02</h2>
 
     <div class="screenshot">
-      <h3> Screenshot/mockup do projeto</h3>
-      <img src="img/Linus.png" alt="Apresentação sobre Linus Torvalds">
+      <img src="./img/Linus.png" alt="Apresentação sobre Linus Torvalds">
     </div>
 
     <div class="descricao-tecnica">
-      <h3> Descrição técnica</h3>
+      <h3>Descrição técnica</h3>
       <p>O trabalho foi realizado em grupo, utilizando documentos de texto e apresentações em slides. Pesquisamos a história de Linus Torvalds e organizamos os conteúdos de forma clara, com tópicos como criatividade, persistência, colaboração e visão de futuro.</p>
     </div>
 
     <div class="desafios">
-      <h3> Desafios enfrentados</h3>
+      <h3>Desafios enfrentados</h3>
       <p>O principal desafio foi resumir a trajetória de Linus Torvalds em uma apresentação curta, mantendo a linguagem acessível e interessante para todos os colegas da turma.</p>
     </div>
 
     <div class="aprendizados">
-      <h3> Aprendizados adquiridos</h3>
+      <h3>Aprendizados adquiridos</h3>
       <p>Aprendemos sobre a importância do software livre, do Linux e como a colaboração em comunidades de código aberto pode transformar o mundo da tecnologia.</p>
     </div>
 
     <div class="link">
-      <h3> Link para o projeto</h3>
+      <h3>Link para o projeto</h3>
       <p><a href="https://www.canva.com/design/DAGePYr7GkM/Cm0LMv9t9MEidN1vgqrYnQ/edit?utm_content=DAGePYr7GkM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Linus Torvalds</a></p>
     </div>
   </section>
+
+  <!-- Script de Modo Escuro -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-dark");
+    const body = document.body;
+
+    // Checa o tema salvo no localStorage
+    if (localStorage.getItem("tema") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    // Atualiza ícone no carregamento
+    toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+
+    // Alterna o modo ao clicar
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const temaAtual = body.classList.contains("dark-mode") ? "dark" : "light";
+      toggleBtn.textContent = temaAtual === "dark" ? "☀️" : "🌙";
+      localStorage.setItem("tema", temaAtual);
+    });
+  </script>
 
 </body>
 </html>
