@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Mim | Meu Portfólio</title>
+  <link rel="stylesheet" href="sobre.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container-header">
+      <h1>Rafaela</h1>
+      <p>Minha Jornada de Desenvolvimento - Semestre 2025</p>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Introdução</a></li>
+          <li><a href="linha.html">Linha do Tempo</a></li>
+          <li><a href="certificados.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="dark-mode-toggle">🌙</button>
+  </header>
+
+  <main>
+    <section class="sobre-mim" data-aos="fade-up">
+      <h2>Sobre Mim</h2>
+      <p>Sou uma pessoa criativa e dedicada, com interesse especial em design, usabilidade e comunicação visual. Durante minha trajetória, desenvolvi projetos que unem conceitos de cores, Gestalt, tipografia e arquétipos, sempre buscando criar experiências visuais coerentes e atrativas. Tenho domínio em HTML e CSS, utilizo o Figma para prototipagem e aplico conhecimentos de metodologias ágeis para organizar e otimizar meus processos. Acredito no poder do design bem pensado para transformar ideias em soluções impactantes.</p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('escuro');
+      toggleButton.textContent = '☀️';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('escuro');
+      if (document.body.classList.contains('escuro')) {
+        toggleButton.textContent = '☀️';
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        toggleButton.textContent = '🌙';
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  </script>
+
+</body>
+</html>
