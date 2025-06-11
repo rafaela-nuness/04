@@ -7,6 +7,9 @@
   --cor-texto-escuro: #eee;
   --velocidade-transicao: 0.3s;
   --sombra-suave: rgba(217, 91, 120, 0.3);
+
+    --fonte-principal: 'Poppins', sans-serif;
+  --fonte-destaque: 'Bebas Neue', sans-serif;
 }
 
 body.escuro {
@@ -21,6 +24,7 @@ body {
   color: var(--cor-texto-claro);
   transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
   line-height: 1.6;
+   font-family: var(--fonte-principal);
 }
 
 /* HEADER */
@@ -57,6 +61,19 @@ header h1 {
   letter-spacing: 1px;
   font-family: var(--fonte-destaque);
   margin: 0;
+
+
+
+   font-family: var(--fonte-destaque);
+
+
+
+
+
+
+
+
+  
 }
 
 header p {

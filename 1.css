@@ -16,17 +16,33 @@
     --velocidade-transicao: 0.3s;
     --raio-borda: 12px;
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --fonte-principal: 'Montserrat', sans-serif;
-    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --cor-secundaria: #a0213c;
+     --cor-primaria: #d95b78;
+
+
+
+      --fonte-principal: 'Poppins', sans-serif;
+  --fonte-destaque: 'Bebas Neue', sans-serif;
 }
 
 /* Estilos gerais */
 body {
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
-    line-height: 1.6;
+ 
+  font-family: var(--fonte-principal);
+ 
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
+
+
+
+
+
+  background: linear-gradient(120deg, #f9f9f9, #ffeef2);
+
+
+
 }
 
 /* HEADER */
@@ -44,11 +60,13 @@ header {
 }
 
 header h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-    font-family: var(--fonte-destaque);
+     font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: var(--fonte-destaque);
+
+
+    
 }
 
 header p {
@@ -354,22 +372,3 @@ body.dark-mode {
 
 
 
-
-#dark-mode-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--cor-primaria);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-}
-
-#dark-mode-toggle:hover {
-  background-color: var(--cor-secundaria);
-}

@@ -12,13 +12,13 @@
 
   <header>
     <div class="container-header">
-      <h1>Rafaela</h1>
+      <h1>RAFAELA NUNES DE SOUZA</h1>
       <p>Minha Jornada de Desenvolvimento - Semestre 2025</p>
       <nav class="menu">
         <ul>
           <li><a href="index.html">Introdução</a></li>
           <li><a href="linha.html">Linha do Tempo</a></li>
-          <li><a href="certificados.html">Contato</a></li>
+          <li><a href="certificados.html">Certificados</a></li>
         </ul>
       </nav>
     </div>
@@ -56,6 +56,273 @@
       }
     });
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<section class="grafico" data-aos="fade-up">
+  <h2>Minhas Habilidades</h2>
+  <canvas id="graficoHabilidades" width="200" height="100"></canvas>
+</section>
+
+
+
+
+<script>
+  const ctx = document.getElementById('graficoHabilidades').getContext('2d');
+  const grafico = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['HTML', 'CSS', 'Figma', 'Design', 'Metodologias Ágeis'],
+      datasets: [{
+        label: 'Nível de Habilidade',
+        data: [9, 8.5, 9, 9, 10],
+        backgroundColor: [
+          '#d95b78', '#a0213c', '#fca5a5', '#fb7185', '#fda4af'
+        ],
+        borderRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          backgroundColor: '#333',
+          titleColor: '#fff',
+          bodyColor: '#fff'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 10
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer id="contato">
+    <p>Contato: <a href="rafa.nunes.2008@hotmail.com" style="color: #ffe1e6;">rafa.nunes.2008@hotmail.com</a> | GitHub: <a href="https://github.com/rafaela-nuness?tab=repositories" target="_blank" style="color: #ffe1e6;">rafaela-nuness</a></p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

@@ -16,13 +16,20 @@
   --velocidade-transicao: 0.3s;
   --sombra-leve: 0 4px 10px rgba(0, 0, 0, 0.1);
   --radius: 8px;
-  --fonte-destaque: 'Montserrat', sans-serif;
+--cor-secundaria: #a0213c;
+
+  
+  --fonte-principal: 'Poppins', sans-serif;
+  --fonte-destaque: 'Bebas Neue', sans-serif;
+
+
+
 }
 
 
 /* ESTILO GLOBAL */
 body {
-  font-family: var(--fonte-destaque);
+  font-family: var(--fonte-principal);
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   transition: background-color var(--velocidade-transicao), color var(--velocidade-transicao);
@@ -176,6 +183,9 @@ header h1 {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--fonte-destaque);
+
+
+  
 }
 
 header p {
@@ -324,6 +334,89 @@ section.projeto.certificados h2 {
     font-size: 1.5rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+  background-color: var(--cor-secundaria);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+footer a {
+  color: #ffe1e6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--cor-primaria);
+  outline: none;
+}
+
+
+
+
+
+
+
+
 
 
 
