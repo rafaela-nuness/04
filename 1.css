@@ -229,18 +229,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Tema claro (padrão) */
 body {
   background-color: #fff;
@@ -307,6 +295,25 @@ body.dark-mode {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tema escuro: somente fundo preto, mantendo o resto igual */
+body.dark-mode {
+  background: #000 !important;
+  color: var(--cor-texto); /* Ou mantenha o texto claro se quiser */
+}
 
 
 
